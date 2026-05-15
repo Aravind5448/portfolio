@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en-IN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aravind D — ML Engineer</title>
+<meta name="description" content="Portfolio of Aravind D — B.Tech AI/DS at SKCET. ML, AI, Cybersecurity.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/Pass.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/CopyShader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/ConvolutionShader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/ShaderPass.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/EffectComposer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+</head>
+<body>
+<div id="c-frame"></div>
+<div id="c-core"></div>
+<div id="three-canvas"></div>
+<button class="theme-toggle" id="themeToggle">◆</button>
+<div id="progress"></div>
+
+<!-- ═══ LANDING ═══ -->
+<div id="page-landing" class="page active">
+  <div class="landing-content">
+    <div class="landing-badge"><span class="dot"></span> SYSTEM ONLINE</div>
+    <h1 class="landing-title">Aravind <span class="ghost">D</span></h1>
+    <p class="landing-sub" id="heroType"></p>
+    <p class="landing-desc">2nd year B.Tech AI & DS · SKCET Coimbatore<br>Building ML systems that ship</p>
+    <nav class="landing-nav">
+      <a href="#" data-page="about" class="nav-btn">01 / About</a>
+      <a href="#" data-page="skills" class="nav-btn">02 / Skills</a>
+      <a href="#" data-page="projects" class="nav-btn">03 / Projects</a>
+      <a href="#" data-page="contact" class="nav-btn">04 / Contact</a>
+      <a href="#" data-page="certs" class="nav-btn">05 / Certs</a>
+    </nav>
+  </div>
+</div>
+
+<!-- ═══ TOP NAV ═══ -->
+<nav class="top-nav" id="topNav">
+  <a href="#" data-page="landing" class="top-nav-logo"><b>A</b>RAVIND.DEV</a>
+  <div class="top-nav-links">
+    <a href="#" data-page="about" class="top-nav-link">About</a>
+    <a href="#" data-page="skills" class="top-nav-link">Skills</a>
+    <a href="#" data-page="projects" class="top-nav-link">Projects</a>
+    <a href="#" data-page="contact" class="top-nav-link">Contact</a>
+    <a href="#" data-page="certs" class="top-nav-link">Certs</a>
+  </div>
+</nav>
+
+<!-- ═══ ABOUT ═══ -->
+<div id="page-about" class="page"><div class="scroll-page">
+  <div class="sp-header"><span class="sp-num">01</span><span class="sp-label">About</span></div>
+  <div class="sp-body">
+    <h2 class="sp-title">About Me</h2>
+    <div class="about-layout">
+      <div class="about-text">
+        <p class="about-p">I'm a 2nd-year B.Tech Artificial Intelligence & Data Science student at Sri Krishna College of Engineering and Technology, Coimbatore. I build machine learning systems that ship — not just score well on Kaggle.</p>
+        <p class="about-p">I've deployed a production-grade phishing detection system trained on 235,795 URLs, with a FastAPI backend, Docker containerization, and GitHub Actions CI/CD pipeline. I run large language models locally using Ollama, compete in international CTF competitions, and am working toward a career as an ML Engineer at a high-impact product company.</p>
+        <p class="about-p">Currently expanding my expertise into MLOps infrastructure, LLM orchestration frameworks, and agentic AI workflows — combining software engineering discipline with data science intuition.</p>
+      </div>
+      <div class="about-stats">
+        <div class="as"><div class="as-n">6+</div><div class="as-l">Hackathons & CTFs</div><div class="as-d">Competed nationally and internationally</div></div>
+        <div class="as"><div class="as-n">10+</div><div class="as-l">Certifications</div><div class="as-d">From AWS, Meta, Cisco, Infosys</div></div>
+        <div class="as"><div class="as-n">71/336</div><div class="as-l">National CTF Rank</div><div class="as-d">Top 22% — HackQuest 2K26</div></div>
+        <div class="as"><div class="as-n">235K+</div><div class="as-l">URLs Trained</div><div class="as-d">Phishing detection dataset</div></div>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+<!-- ═══ SKILLS ═══ -->
+<div id="page-skills" class="page"><div class="scroll-page">
+  <div class="sp-header"><span class="sp-num">02</span><span class="sp-label">Capabilities</span></div>
+  <div class="sp-body">
+    <h2 class="sp-title">Skills & Expertise</h2>
+    <div class="skills-list">
+      <div class="sk"><div class="sk-top"><div class="sk-info"><div class="sk-name">Machine Learning</div></div></div><div class="sk-desc">Build end-to-end ML pipelines — from data preprocessing and feature engineering to model selection, hyperparameter tuning, and deployment. Experienced with regression, classification, clustering, and ensemble methods.</div><div class="sk-tech"><span>Scikit-learn</span><span>XGBoost</span><span>Pandas</span><span>NumPy</span></div></div>
+      <div class="sk"><div class="sk-top"><div class="sk-info"><div class="sk-name">Python</div></div></div><div class="sk-desc">Core Python with strong OOP fundamentals. Write clean, modular code for data analysis, API development, and automation scripts. Experience with FastAPI, async programming, and package management.</div><div class="sk-tech"><span>FastAPI</span><span>Pydantic</span><span>AsyncIO</span><span>Poetry</span></div></div>
+      <div class="sk"><div class="sk-top"><div class="sk-info"><div class="sk-name">MLOps & Deployment</div></div></div><div class="sk-desc">Containerize ML models with Docker, set up CI/CD pipelines via GitHub Actions, and deploy production APIs. Experience with model versioning and monitoring.</div><div class="sk-tech"><span>Docker</span><span>GitHub Actions</span><span>Streamlit</span><span>FastAPI</span></div></div>
+      <div class="sk"><div class="sk-top"><div class="sk-info"><div class="sk-name">Data Science & Analytics</div></div></div><div class="sk-desc">Exploratory data analysis, statistical modeling, and data visualization. Clean and transform messy real-world datasets. Create insightful dashboards and reports.</div><div class="sk-tech"><span>Pandas</span><span>Matplotlib</span><span>Seaborn</span><span>SQL</span></div></div>
+      <div class="sk"><div class="sk-top"><div class="sk-info"><div class="sk-name">Prompt Engineering / LLMs</div></div></div><div class="sk-desc">Run and interact with LLMs locally via Ollama. Design effective prompts, chain-of-thought workflows, and agentic systems. Experience with Hermes Agent and OpenCode for AI-assisted development.</div><div class="sk-tech"><span>Ollama</span><span>Hermes Agent</span><span>OpenCode</span><span>LangChain</span></div></div>
+      <div class="sk"><div class="sk-top"><div class="sk-info"><div class="sk-name">SQL & Databases</div></div></div><div class="sk-desc">Write complex queries, joins, and aggregations. Design relational database schemas. Experience with PostgreSQL, MySQL, and JDBC integration in Java applications.</div><div class="sk-tech"><span>PostgreSQL</span><span>MySQL</span><span>JDBC</span><span>SQLite</span></div></div>
+      <div class="sk"><div class="sk-top"><div class="sk-info"><div class="sk-name">Cybersecurity / CTF</div></div></div><div class="sk-desc">Active CTF competitor with national ranking. Knowledge of network security, cryptography, web vulnerabilities (OWASP Top 10), and penetration testing methodologies.</div><div class="sk-tech"><span>Nmap</span><span>Wireshark</span><span>Burp Suite</span><span>Python</span></div></div>
+      <div class="sk"><div class="sk-top"><div class="sk-info"><div class="sk-name">Java</div></div></div><div class="sk-desc">Object-oriented programming with Java. Built console applications with full OOP design patterns and database connectivity via JDBC.</div><div class="sk-tech"><span>OOP</span><span>JDBC</span><span>Swing</span><span>Maven</span></div></div>
+    </div>
+  </div>
+</div></div>
+
+<!-- ═══ PROJECTS ═══ -->
+<div id="page-projects" class="page"><div class="scroll-page">
+  <div class="sp-header"><span class="sp-num">03</span><span class="sp-label">Systems</span></div>
+  <div class="sp-body">
+    <h2 class="sp-title">Projects</h2>
+    <div class="projects-list">
+      <div class="pj"><div class="pj-top"><div class="pj-status live">● LIVE</div><div><div class="pj-name">Phishing URL Classifier</div><div class="pj-date">2026</div></div></div><div class="pj-desc">A production-grade machine learning system that detects phishing URLs using zero-visit analysis. Extracts 13 engineered features including Shannon Entropy, Punycode homograph detection, and DGA pattern analysis from raw URLs without visiting them. Achieves 99.64% accuracy on the test set.</div><div class="pj-highlights"><div class="pj-h"><span class="pj-hn">99.64%</span><span class="pj-hl">Accuracy</span></div><div class="pj-h"><span class="pj-hn">235K+</span><span class="pj-hl">URLs Trained</span></div><div class="pj-h"><span class="pj-hn">13</span><span class="pj-hl">Features</span></div></div><div class="pj-tech"><span>Python</span><span>FastAPI</span><span>Docker</span><span>Streamlit</span><span>Scikit-learn</span><span>GitHub Actions</span></div><div class="pj-links"><a href="https://phishing-classifier-project.streamlit.app/" target="_blank">▶ Live Demo</a><a href="https://github.com/Aravind5448/phishing-classifier" target="_blank">GitHub →</a></div></div>
+      <div class="pj"><div class="pj-top"><div class="pj-status done">● DONE</div><div><div class="pj-name">Data Science Salary Predictor</div><div class="pj-date">2025</div></div></div><div class="pj-desc">XGBoost model trained on 151K+ real salary records from Kaggle. Features engineered from 422 job titles (grouped into 12 categories), 97 countries (11 regions), experience levels, and company attributes. Achieves R² 0.27 on real data — typical for salary prediction without company-specific features.</div><div class="pj-highlights"><div class="pj-h"><span class="pj-hn">151K+</span><span class="pj-hl">Records</span></div><div class="pj-h"><span class="pj-hn">22</span><span class="pj-hl">Features</span></div><div class="pj-h"><span class="pj-hn">12</span><span class="pj-hl">Title Groups</span></div></div><div class="pj-tech"><span>Python</span><span>XGBoost</span><span>Scikit-learn</span><span>Pandas</span><span>Streamlit</span><span>Docker</span></div><div class="pj-links"><a href="https://github.com/Aravind5448/salary_predictor" target="_blank">GitHub →</a></div></div>
+      <div class="pj"><div class="pj-top"><div class="pj-status dev">● IN DEV</div><div><div class="pj-name">Network Intrusion Detection System</div><div class="pj-date">2026</div></div></div><div class="pj-desc">Machine learning-based network traffic analyzer trained on the NSL-KDD benchmark dataset. Classifies network connections into normal or attack types — DoS, Probe, R2L, and U2R. Features a live monitoring dashboard built with Streamlit for real-time traffic visualization.</div><div class="pj-highlights"><div class="pj-h"><span class="pj-hn">4</span><span class="pj-hl">Attack Classes</span></div><div class="pj-h"><span class="pj-hn">125K+</span><span class="pj-hl">Samples</span></div><div class="pj-h"><span class="pj-hn">41</span><span class="pj-hl">Features</span></div></div><div class="pj-tech"><span>Python</span><span>XGBoost</span><span>Scikit-learn</span><span>Streamlit</span><span>Pandas</span></div><div class="pj-links"><a href="https://github.com/Aravind5448" target="_blank">GitHub →</a></div></div>
+      <div class="pj"><div class="pj-top"><div class="pj-status done">● DONE</div><div><div class="pj-name">Auto MPG Analysis</div><div class="pj-date">2026</div></div></div><div class="pj-desc">Comprehensive data cleaning and exploratory visualization of the UCI Auto MPG dataset. Handled missing values (median imputation by cylinder group), removed 149 duplicate car names, capped outliers using IQR method, and engineered 5 new features. Created 10 publication-ready visualizations. Part of Thiranex Data Science Internship Task 1.</div><div class="pj-highlights"><div class="pj-h"><span class="pj-hn">149</span><span class="pj-hl">Dupes Fixed</span></div><div class="pj-h"><span class="pj-hn">10</span><span class="pj-hl">Visualizations</span></div><div class="pj-h"><span class="pj-hn">5</span><span class="pj-hl">New Features</span></div></div><div class="pj-tech"><span>Python</span><span>Pandas</span><span>Matplotlib</span><span>Seaborn</span><span>Jupyter</span></div><div class="pj-links"><a href="https://github.com/Aravind5448/auto-mpg-analysis" target="_blank">GitHub →</a></div></div>
+      <div class="pj"><div class="pj-top"><div class="pj-status done">● DONE</div><div><div class="pj-name">Vehicle Rental System</div><div class="pj-date">2025</div></div></div><div class="pj-desc">Console-based Java application for managing vehicle rental operations. Handles vehicle inventory management, customer records, rental transactions, and return processing. Built with full Object-Oriented Programming principles — encapsulation, inheritance, polymorphism — and integrated with SQL database via JDBC for persistent data storage.</div><div class="pj-highlights"><div class="pj-h"><span class="pj-hn">4</span><span class="pj-hl">Vehicle Types</span></div><div class="pj-h"><span class="pj-hn">OOP</span><span class="pj-hl">Design</span></div><div class="pj-h"><span class="pj-hn">JDBC</span><span class="pj-hl">Integration</span></div></div><div class="pj-tech"><span>Java</span><span>OOP</span><span>SQL</span><span>JDBC</span></div><div class="pj-links"><a href="https://github.com/Aravind5448/Vehicle-Rental-System-VRS-" target="_blank">GitHub →</a></div></div>
+    </div>
+  </div>
+</div></div>
+
+<!-- ═══ CERTS ═══ -->
+<div id="page-certs" class="page"><div class="scroll-page">
+  <div class="sp-header"><span class="sp-num">05</span><span class="sp-label">Credentials</span></div>
+  <div class="sp-body">
+    <h2 class="sp-title">Certifications</h2>
+    <div class="certs-g">
+      <div class="cec"><div class="cec-main"><div class="cec-n">Federated Learning with TensorFlow</div><div class="cec-by">Infosys Springboard</div><div class="cec-desc">Built federated learning pipelines using TensorFlow Federated — training models across decentralized data while preserving privacy.</div></div><div class="cec-meta"><span class="cec-tag">ML</span><span class="cec-date">Apr 2026</span></div></div>
+      <div class="cec"><div class="cec-main"><div class="cec-n">Intro to Machine Learning</div><div class="cec-by">AWS</div><div class="cec-desc">Core ML concepts: supervised/unsupervised learning, model evaluation, and AWS SageMaker pipeline basics.</div></div><div class="cec-meta"><span class="cec-tag">ML</span><span class="cec-date">Jan 2025</span></div></div>
+      <div class="cec"><div class="cec-main"><div class="cec-n">Programming in Python</div><div class="cec-by">Meta</div><div class="cec-desc">OOP, data structures, and Python fundamentals — the foundation for all my ML and backend work.</div></div><div class="cec-meta"><span class="cec-tag">CS</span><span class="cec-date">May 2025</span></div></div>
+      <div class="cec"><div class="cec-main"><div class="cec-n">Networking Basics</div><div class="cec-by">Cisco</div><div class="cec-desc">TCP/IP, DNS, routing protocols — essential knowledge for cybersecurity CTFs and network-based ML deployments.</div></div><div class="cec-meta"><span class="cec-tag">Net</span><span class="cec-date">Jan 2025</span></div></div>
+      <div class="cec"><div class="cec-main"><div class="cec-n">Fundamentals of Cryptography</div><div class="cec-by">Infosys Springboard</div><div class="cec-desc">Symmetric/asymmetric encryption, hashing, and digital signatures — directly applied in CTF challenges.</div></div><div class="cec-meta"><span class="cec-tag">Sec</span><span class="cec-date">Feb 2026</span></div></div>
+      <div class="cec"><div class="cec-main"><div class="cec-n">Version Control (Git & GitHub)</div><div class="cec-by">Meta</div><div class="cec-desc">Git workflows, branching, CI/CD — used daily for all my projects and collaborations.</div></div><div class="cec-meta"><span class="cec-tag">Dev</span><span class="cec-date">May 2025</span></div></div>
+      <div class="cec"><div class="cec-main"><div class="cec-n">Data Warehouse Essentials</div><div class="cec-by">Infosys Springboard</div><div class="cec-desc">Data modeling, ETL processes, and warehouse architecture for analytical data pipelines.</div></div><div class="cec-meta"><span class="cec-tag">Data</span><span class="cec-date">Jul 2025</span></div></div>
+      <div class="cec"><div class="cec-main"><div class="cec-n">Intro to Back-End Development</div><div class="cec-by">Meta</div><div class="cec-desc">REST APIs, server logic, databases — foundation for deploying ML models as web services.</div></div><div class="cec-meta"><span class="cec-tag">Dev</span><span class="cec-date">May 2025</span></div></div>
+    </div>
+  </div>
+</div></div>
+
+<!-- ═══ CONTACT ═══ -->
+<div id="page-contact" class="page"><div class="scroll-page">
+  <div class="sp-header"><span class="sp-num">04</span><span class="sp-label">Connect</span></div>
+  <div class="sp-body">
+    <h2 class="sp-title">Let's Build Something.</h2>
+    <div class="contact-g">
+      <div class="contact-t">Open to ML internships — remote or onsite in Coimbatore, Chennai, Bangalore. Always up for interesting problems in AI, security, and systems.</div>
+      <div class="contact-l">
+        <a href="mailto:aravind5448g@gmail.com" class="cl"><span class="ic">✉</span> aravind5448g@gmail.com</a>
+        <a href="https://linkedin.com/in/aravind-dhivakaran-6627hp" target="_blank" class="cl"><span class="ic">▣</span> LinkedIn</a>
+        <a href="https://github.com/Aravind5448" target="_blank" class="cl"><span class="ic">⌘</span> /Aravind5448</a>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+<footer>ARAVIND D · ML ENGINEER · COIMBATORE · ∞</footer>
+
+<script>
+(function(){
+const W=window.innerWidth,H=window.innerHeight;
+const scene=new THREE.Scene();
+const cam=new THREE.PerspectiveCamera(72,W/H,0.1,700);
+cam.position.set(0,4,32);
+const renderer=new THREE.WebGLRenderer({alpha:true,antialias:true});
+renderer.setSize(W,H);renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=0.38;
+document.getElementById('three-canvas').appendChild(renderer.domElement);
+const composer=new THREE.EffectComposer(renderer);
+composer.addPass(new THREE.RenderPass(scene,cam));
+const bloom=new THREE.UnrealBloomPass(new THREE.Vector2(W,H),1.2,0.25,0.08);
+composer.addPass(bloom);
+let isDark=document.documentElement.getAttribute('data-theme')==='dark';
+const col=()=>isDark?0xffffff:0x000000;
+let mx=0,my=0,clickBoom=0,scrollPct=0,time=0,orbitA=0;
+let cvX=0,cvY=0,cvZ=0,tX=0,tY=0,tZ=32;
+let transSpeed=0;
+const wc=new THREE.Mesh(new THREE.SphereGeometry(0.5,32,32),new THREE.MeshBasicMaterial({color:col(),transparent:true,opacity:1}));scene.add(wc);
+const wg=new THREE.Mesh(new THREE.SphereGeometry(1,24,24),new THREE.MeshBasicMaterial({color:col(),transparent:true,opacity:0.15}));scene.add(wg);
+const wg2=new THREE.Mesh(new THREE.SphereGeometry(1.8,24,24),new THREE.MeshBasicMaterial({color:col(),transparent:true,opacity:0.05}));scene.add(wg2);
+const eRings=[];[0,1,2].forEach(i=>{const r=new THREE.Mesh(new THREE.TorusGeometry(1.2+i*0.5,0.015,8,48),new THREE.MeshBasicMaterial({color:col(),transparent:true,opacity:0.06+i*0.02}));r.rotation.x=Math.PI/2.5+Math.random()*0.5;r.userData={spd:0.004+Math.random()*0.006};scene.add(r);eRings.push(r);});
+const EM=1200,eP=new Float32Array(EM*3),eA=new Float32Array(EM),eE=new Float32Array(EM),eL=new Float32Array(EM),eS=new Float32Array(EM),eSp=new Float32Array(EM);
+for(let i=0;i<EM;i++){eA[i]=Math.random()*Math.PI*2;eE[i]=(Math.random()-0.5)*Math.PI*0.9;eSp[i]=0.3+Math.random()*3;eL[i]=0;eS[i]=0.02+Math.random()*0.15;}
+const eg=new THREE.BufferGeometry();eg.setAttribute('position',new THREE.BufferAttribute(eP,3));eg.setAttribute('size',new THREE.BufferAttribute(eS,1));
+const em=new THREE.PointsMaterial({color:col(),size:0.12,transparent:true,opacity:0.7,sizeAttenuation:true,blending:THREE.AdditiveBlending,depthWrite:false});
+const ept=new THREE.Points(eg,em);scene.add(ept);
+const shockR=[];for(let i=0;i<3;i++){const r=new THREE.Mesh(new THREE.RingGeometry(0.5,0.7,64),new THREE.MeshBasicMaterial({color:col(),transparent:true,opacity:0,side:THREE.DoubleSide,depthWrite:false}));r.rotation.x=Math.PI/2.2;r.position.z=-0.3;r.userData={life:-1,delay:i*0.12,maxS:14+i*9,spd:2.5+i*0.5};scene.add(r);shockR.push(r);}
+const N=12000,pP=new Float32Array(N*3),pSz=new Float32Array(N),pC=new Float32Array(N*3),pM=[];
+for(let i=0;i<N;i++){const arm=Math.floor(Math.random()*4);const rad=1.5+Math.pow(Math.random(),0.5)*75;const ang=rad*0.55+(arm/4)*Math.PI*2+(Math.random()-0.5)*(0.4+rad*0.05);const elev=Math.sin(ang*2)*0.4*(1-rad/34)+(Math.random()-0.5)*(0.6+rad*0.1)*0.3;pP[i*3]=Math.cos(ang)*rad;pP[i*3+1]=elev;pP[i*3+2]=Math.sin(ang)*rad;pSz[i]=0.02+Math.random()*0.18*(1-Math.min(rad/80,1));const b=0.08+Math.random()*0.92*(1-Math.min(rad/80,1));pC[i*3]=b;pC[i*3+1]=b;pC[i*3+2]=b;pM.push({rad,ang,spd:0.004+Math.random()*0.008*(1/rad+0.3),ph:Math.random()*Math.PI*2,oSp:0.5+Math.random()*2.5,oAm:0.1+Math.random()*0.5,gp:0.001+Math.random()*0.004});}
+const pg=new THREE.BufferGeometry();pg.setAttribute('position',new THREE.BufferAttribute(pP,3));pg.setAttribute('size',new THREE.BufferAttribute(pSz,1));pg.setAttribute('color',new THREE.BufferAttribute(pC,3));
+const pm=new THREE.PointsMaterial({size:0.08,transparent:true,opacity:0.85,sizeAttenuation:true,vertexColors:true,blending:THREE.AdditiveBlending,depthWrite:false});
+const gal=new THREE.Points(pg,pm);scene.add(gal);
+const DR=3000,dB=new Float32Array(DR*3),dM=[];for(let i=0;i<DR;i++){const r=3+Math.pow(Math.random(),0.5)*40,a=Math.random()*Math.PI*2,e=(Math.random()-0.5)*12;dB[i*3]=Math.cos(a)*r;dB[i*3+1]=e;dB[i*3+2]=Math.sin(a)*r;dM.push({r,a,e,sp:0.2+Math.random()*0.9,ph:Math.random()*Math.PI*2,wb:0.05+Math.random()*0.5,ws:0.3+Math.random()*1.8});}
+const dG=[];[[0.55,0.04,0.3],[0.25,0.12,0.4],[0.12,0.3,0.45],[0.05,0.6,0.5],[0.03,1.0,0.55]].forEach((c,gi)=>{const n=Math.floor(DR*c[0]),sz=c[1],op=c[2];const off=gi==0?0:dG.reduce((a,b)=>a+b.n,0);const a=new Float32Array(n*3),da=dM.slice(off,off+n);for(let i=0;i<n;i++){a[i*3]=dB[(off+i)*3];a[i*3+1]=dB[(off+i)*3+1];a[i*3+2]=dB[(off+i)*3+2];}const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(a,3));const m=new THREE.PointsMaterial({color:col(),size:sz,transparent:true,opacity:op,sizeAttenuation:true,blending:THREE.AdditiveBlending,depthWrite:false});dG.push({pts:new THREE.Points(g,m),meta:m,data:da,pos:a,n});scene.add(dG[dG.length-1].pts);});
+const bC=[];for(let i=0;i<25;i++){const idx=DR-25+i;if(idx>=DR||idx<0)break;const m=dM[idx];const s=0.12+Math.random()*0.5;const c=new THREE.Mesh(new THREE.BoxGeometry(s,s,s),new THREE.MeshBasicMaterial({color:col(),wireframe:true,transparent:true,opacity:0.12}));c.position.set(dB[idx*3],dB[idx*3+1],dB[idx*3+2]);c.userData={meta:m,rs:0.3+Math.random()*2.5};scene.add(c);bC.push(c);}
+const nN=3000,nP=new Float32Array(nN*3),nSz=new Float32Array(nN);for(let i=0;i<nN;i++){const a=Math.random()*Math.PI*2,r=6+Math.random()*50;nP[i*3]=Math.cos(a)*r+(Math.random()-0.5)*25;nP[i*3+1]=(Math.random()-0.5)*35;nP[i*3+2]=Math.sin(a)*r+(Math.random()-0.5)*25;nSz[i]=0.5+Math.random()*5;}
+const ng=new THREE.BufferGeometry();ng.setAttribute('position',new THREE.BufferAttribute(nP,3));ng.setAttribute('size',new THREE.BufferAttribute(nSz,1));
+const nm=new THREE.PointsMaterial({color:col(),size:0.6,transparent:true,opacity:isDark?0.025:0.008,sizeAttenuation:true,blending:THREE.AdditiveBlending,depthWrite:false});
+const neb=new THREE.Points(ng,nm);scene.add(neb);
+const sN=3500,sP=new Float32Array(sN*3);for(let i=0;i<sN;i++){sP[i*3]=(Math.random()-0.5)*500;sP[i*3+1]=(Math.random()-0.5)*500;sP[i*3+2]=(Math.random()-0.5)*500-50;}
+const sg=new THREE.BufferGeometry();sg.setAttribute('position',new THREE.BufferAttribute(sP,3));
+const sm=new THREE.PointsMaterial({color:col(),size:0.04,transparent:true,opacity:isDark?0.35:0.05,sizeAttenuation:true,blending:THREE.AdditiveBlending});
+const stars=new THREE.Points(sg,sm);scene.add(stars);
+document.addEventListener('mousemove',e=>{mx=(e.clientX/W)*2-1;my=-(e.clientY/H)*2+1;});
+document.addEventListener('click',function(e){
+  if(transSpeed>0.1)return;
+  clickBoom=1;shockR.forEach(r=>{r.userData.life=0;});const cx=e.clientX,cy=e.clientY;
+  for(let r=0;r<3;r++){setTimeout(()=>{const el=document.createElement('div');el.className='ripple';el.style.cssText='left:'+cx+'px;top:'+cy+'px;width:3px;height:3px;border-width:'+(1.2-r*0.3)+'px;animation:rip'+r+' '+(0.4+r*0.2)+'s ease-out forwards';document.body.appendChild(el);setTimeout(()=>el.remove(),1000);},r*50);}
+  const fl=document.createElement('div');fl.className='flash';document.body.appendChild(fl);
+  requestAnimationFrame(function(){fl.style.opacity='0.12';setTimeout(function(){fl.style.opacity='0';setTimeout(function(){fl.remove();},150);},60);});
+  for(let i=0;i<45;i++){let p=document.createElement('div');p.className='burst';let a=(Math.PI*2/45)*i+Math.random()*0.3,d=20+Math.random()*150;p.style.cssText='left:'+cx+'px;top:'+cy+'px;width:'+(1+Math.random()*4)+'px;height:'+(1+Math.random()*4)+'px;transition-duration:'+(0.15+Math.random()*0.25)+'s';document.body.appendChild(p);requestAnimationFrame(function(){p.style.transform='translate('+(Math.cos(a)*d)+'px,'+(Math.sin(a)*d)+'px) scale(0)';p.style.opacity='0';});setTimeout(function(){p.remove();},600);}
+  const w=document.createElement('div');w.style.cssText='position:fixed;pointer-events:none;z-index:99995;left:'+cx+'px;top:'+cy+'px;width:10px;height:10px;border-radius:50%;border:1px solid var(--ink);mix-blend-mode:difference;transform:translate(-50%,-50%) scale(0);animation:waveBoom 0.8s ease-out forwards';
+  if(!document.getElementById('waveStyle')){const s=document.createElement('style');s.id='waveStyle';s.textContent='@keyframes waveBoom{0%{transform:translate(-50%,-50%) scale(0);opacity:0.7}100%{transform:translate(-50%,-50%) scale(1);opacity:0;width:600px;height:600px}}';document.head.appendChild(s);}
+  document.body.appendChild(w);setTimeout(()=>w.remove(),900);
+});
+const m3d=new THREE.Vector3();
+window.__triggerTravel=function(){transSpeed=1;clickBoom=1;shockR.forEach(r=>{r.userData.life=0;});setTimeout(function(){transTarget=1;},600);};
+function anim(){
+  requestAnimationFrame(anim);time+=0.004;clickBoom*=0.88;orbitA+=0.002;
+  if(transSpeed>0){transSpeed*=0.97;const spd=transSpeed*3;tX=Math.sin(orbitA+spd)*(28)+mx*0.5*3+spd*2;tY=3.5+my*0.4*2.5-spd;tZ=Math.cos(orbitA+spd)*(28)+mx*2-spd*5;}
+  else{tX=Math.sin(orbitA)*(28)+mx*0.5*3;tY=3.5+my*0.4*2.5;tZ=Math.cos(orbitA)*(28)+mx*2;}
+  cvX+=(tX-cam.position.x)*0.02;cvY+=(tY-cam.position.y)*0.02;cvZ+=(tZ-cam.position.z)*0.02;
+  cvX*=0.92;cvY*=0.92;cvZ*=0.92;
+  cam.position.x+=cvX;cam.position.y+=cvY;cam.position.z+=cvZ;
+  cam.lookAt(0,0,0);
+  m3d.set(mx*8,my*5,0);const mouseSpin=mx*0.5;const mouseTilt=my*0.15;
+  const p=gal.geometry.attributes.position.array;
+  for(let i=0;i<N;i++){const m=pM[i];const osc=Math.sin(time*m.oSp+m.ph)*m.oAm;const w2=Math.cos(time*0.2+m.ph*0.7)*0.15;const boom=clickBoom*Math.sin(time*3+m.ph)*4+transSpeed*Math.sin(time*6+m.ph)*8;const ang=m.rad?m.ang+time*m.spd+transSpeed*0.3:0;const rad=m.rad+osc+boom*0.2;const dx=m3d.x-p[i*3],dy=m3d.y-p[i*3+1];const gp=Math.min(m.gp*3,2);p[i*3]=Math.cos(ang)*rad+dx*gp+boom*Math.cos(m.ph)*0.2;p[i*3+1]=Math.sin(ang*2)*0.4*(1-m.rad/34)+w2+dy*gp*0.5+boom*0.15*Math.sin(m.ph);p[i*3+2]=Math.sin(ang)*rad+boom*Math.sin(m.ph*0.7)*0.2;}
+  gal.geometry.attributes.position.needsUpdate=true;gal.rotation.z+=0.0004+mouseSpin*0.003+transSpeed*0.02;gal.rotation.x+=(mouseTilt-gal.rotation.x)*0.01;
+  const ep=ept.geometry.attributes.position.array;
+  for(let i=0;i<EM;i++){eL[i]+=0.016*eSp[i]*0.5;const d=eL[i]+transSpeed*10;if(d>30+Math.random()*10||d<0.01){eA[i]=Math.random()*Math.PI*2;eE[i]=(Math.random()-0.5)*Math.PI*0.9;eL[i]=0;ep[i*3]=0;ep[i*3+1]=0;ep[i*3+2]=0;continue;}
+    ep[i*3]=Math.cos(eA[i])*Math.cos(eE[i])*d+Math.sin(time*2+eA[i]*3)*0.15+clickBoom*Math.sin(time*4+eA[i])*0.5+transSpeed*Math.sin(time*3+i);
+    ep[i*3+1]=Math.sin(eE[i])*d+Math.cos(time*1.5+i)*0.12+clickBoom*Math.cos(time*3+eE[i])*0.5+transSpeed*Math.cos(time*2+i);
+    ep[i*3+2]=Math.sin(eA[i])*Math.cos(eE[i])*d+Math.cos(time*2+eA[i]*3)*0.15+clickBoom*Math.sin(time*4+eA[i])*0.5+transSpeed*Math.sin(time*3+i);}
+  ept.geometry.attributes.position.needsUpdate=true;em.opacity=0.25+clickBoom*0.5+transSpeed*0.4+Math.sin(time*0.8)*0.1;
+  shockR.forEach(r=>{if(r.userData.life<0&&transSpeed<0.1)return;if(transSpeed>0.1){r.userData.life+=0.03;const l=r.userData.life;if(l>1){r.material.opacity=0;r.userData.life=-1;}else{const e=1-Math.pow(1-l,2);r.scale.setScalar(1+e*r.userData.maxS*2);r.material.opacity=0.3*(1-e);}}else{if(r.userData.life<0)return;r.userData.life+=0.016*r.userData.spd;const l=r.userData.life;if(l>1){r.material.opacity=0;r.userData.life=-1;return;}const e=1-Math.pow(1-l,2);r.scale.setScalar(1+e*r.userData.maxS);r.material.opacity=0.25*(1-e);}});
+  dG.forEach(g=>{const a=g.pos;for(let i=0;i<g.n;i++){const m=g.data[i];const ang=m.a+time*m.sp*0.3+transSpeed*0.5;const wob=Math.sin(time*m.ws+m.ph)*m.wb;const bo=clickBoom*1.2+transSpeed*2;a[i*3]=Math.cos(ang)*(m.r+bo)+Math.sin(time*5+m.ph)*bo*0.5+transSpeed*Math.sin(time*3+m.ph)*3;a[i*3+1]=m.e+wob+clickBoom*Math.sin(time*3+m.ph)*1.2+transSpeed*Math.sin(time*2+m.ph)*2;a[i*3+2]=Math.sin(ang)*(m.r+bo)+Math.cos(time*5+m.ph)*bo*0.5+transSpeed*Math.cos(time*3+m.ph)*3;}g.pts.geometry.attributes.position.needsUpdate=true;});
+  bC.forEach(c=>{const m=c.userData.meta;const ang=m.a+time*m.sp*0.3+transSpeed*0.5;const bo=clickBoom*1.2+transSpeed*2;c.position.x=Math.cos(ang)*(m.r+bo)+Math.sin(time*5+m.ph)*bo*0.5+transSpeed*Math.sin(time*3+m.ph)*3;c.position.y=m.e+Math.sin(time*m.ws+m.ph)*m.wb+clickBoom*Math.sin(time*3+m.ph)*1.2+transSpeed*Math.sin(time*2+m.ph)*2;c.position.z=Math.sin(ang)*(m.r+bo)+Math.cos(time*5+m.ph)*bo*0.5+transSpeed*Math.cos(time*3+m.ph)*3;c.rotation.x+=c.userData.rs*0.04+clickBoom*0.1+transSpeed*0.3;c.rotation.y+=c.userData.rs*0.05+clickBoom*0.1+transSpeed*0.3;c.rotation.z+=c.userData.rs*0.02+clickBoom*0.1+transSpeed*0.2;});
+  const pu=1+clickBoom*0.6+transSpeed*0.8+Math.sin(time*0.9)*0.1;wc.scale.setScalar(pu);wg.scale.setScalar(1+clickBoom*0.35+transSpeed*0.4+Math.sin(time*0.55)*0.07);wg2.scale.setScalar(1+clickBoom*0.25+transSpeed*0.3+Math.sin(time*0.35)*0.05);
+  wc.material.opacity=0.6+clickBoom*0.4+transSpeed*0.4+Math.sin(time*0.9)*0.2;wg.material.opacity=0.08+clickBoom*0.12+transSpeed*0.15+Math.sin(time*0.55)*0.04;wg2.material.opacity=0.03+clickBoom*0.06+transSpeed*0.1+Math.sin(time*0.35)*0.02;
+  eRings.forEach((r,i)=>{r.rotation.z+=r.userData.spd*(1+clickBoom*3+transSpeed*5);r.rotation.x+=0.001;r.scale.setScalar(1+clickBoom*0.3+transSpeed*0.5+Math.sin(time*0.6+i)*0.05);});
+  neb.rotation.y+=0.00015;stars.rotation.y+=0.00003;
+  bloom.strength+=(1.2+clickBoom*1.0+transSpeed*1.5-bloom.strength)*0.025;composer.render();
+}
+anim();
+window.addEventListener('resize',function(){cam.aspect=window.innerWidth/window.innerHeight;cam.updateProjectionMatrix();renderer.setSize(window.innerWidth,window.innerHeight);composer.setSize(window.innerWidth,window.innerHeight);});
+window.addEventListener('themeChanged',function(e){
+  isDark=e.detail==='dark';const c=isDark?0xffffff:0x000000;
+  wc.material.color.setHex(c);wg.material.color.setHex(c);wg2.material.color.setHex(c);
+  em.color.setHex(c);eRings.forEach(r=>{r.material.color.setHex(c);});shockR.forEach(r=>{r.material.color.setHex(c);});
+  dG.forEach(g=>{g.meta.color.setHex(c);});bC.forEach(c=>{c.material.color.setHex(c);});
+  sm.color.setHex(c);sm.opacity=isDark?0.35:0.05;nm.color.setHex(c);nm.opacity=isDark?0.025:0.008;
+  const cc=gal.geometry.attributes.color.array;for(let i=0;i<N;i++){const m=pM[i];const b=isDark?0.08+Math.random()*0.92*(1-Math.min(m.rad/80,1)):0.04+Math.random()*0.35*(1-Math.min(m.rad/80,1));cc[i*3]=b;cc[i*3+1]=b;cc[i*3+2]=b;}gal.geometry.attributes.color.needsUpdate=true;
+});
+(function(){const s=document.createElement('style');s.id='ripStyle';s.textContent='@keyframes rip0{0%{transform:translate(-50%,-50%) scale(0);opacity:0.5}100%{transform:translate(-50%,-50%) scale(1);opacity:0;width:200px;height:200px}}@keyframes rip1{0%{transform:translate(-50%,-50%) scale(0);opacity:0.3}100%{transform:translate(-50%,-50%) scale(1);opacity:0;width:300px;height:300px}}@keyframes rip2{0%{transform:translate(-50%,-50%) scale(0);opacity:0.15}100%{transform:translate(-50%,-50%) scale(1);opacity:0;width:400px;height:400px}}';document.head.appendChild(s);})();
+})();
+</script>
+<script>
+(function(){
+  const t=document.getElementById('themeToggle'),h=document.documentElement;
+  let dark=localStorage.getItem('a_theme')!=='light';
+  if(!dark){h.setAttribute('data-theme','light');t.textContent='◇';}
+  t.addEventListener('click',()=>{dark=!dark;h.setAttribute('data-theme',dark?'dark':'light');t.textContent=dark?'◆':'◇';localStorage.setItem('a_theme',dark?'dark':'light');window.dispatchEvent(new CustomEvent('themeChanged',{detail:dark?'dark':'light'}));});
+})();
+(function(){
+  const f=document.getElementById('c-frame'),c=document.getElementById('c-core');
+  document.addEventListener('mousemove',e=>{f.style.left=e.clientX+'px';f.style.top=e.clientY+'px';c.style.left=e.clientX+'px';c.style.top=e.clientY+'px';if(Math.random()>0.75){const p=document.createElement('div');p.className='trail';const dx=(Math.random()-0.5)*14,dy=(Math.random()-0.5)*14;p.style.cssText='left:'+e.clientX+'px;top:'+e.clientY+'px;width:'+(1+Math.random()*2)+'px;height:'+(1+Math.random()*2)+'px;transition-duration:'+(0.3+Math.random()*0.3)+'s';document.body.appendChild(p);requestAnimationFrame(function(){p.style.transform='translate('+dx+'px,'+dy+'px)';p.style.opacity='0';});setTimeout(function(){p.remove();},700);}});
+  document.querySelectorAll('a,button,.btn,.nav-btn,.top-nav-link,.cl,.theme-toggle').forEach(el=>{el.addEventListener('mouseenter',()=>f.classList.add('hover'));el.addEventListener('mouseleave',()=>f.classList.remove('hover'));});
+  document.addEventListener('mousedown',()=>f.classList.add('click'));document.addEventListener('mouseup',()=>f.classList.remove('click'));
+  document.addEventListener('mouseleave',()=>{f.style.opacity='0';c.style.opacity='0';});document.addEventListener('mouseenter',()=>{f.style.opacity='1';c.style.opacity='1';});
+})();
+(function(){
+  let currentPage='landing',transitioning=false;
+  const topNav=document.getElementById('topNav');
+  function showPage(id){
+    if(transitioning||id===currentPage)return;
+    transitioning=true;
+    const prev=document.getElementById('page-'+currentPage);
+    const next=document.getElementById('page-'+id);
+    if(!next||!prev)return;
+    if(id==='landing')topNav.classList.remove('visible');else topNav.classList.add('visible');
+    document.querySelectorAll('.top-nav-link').forEach(l=>l.style.color='');
+    const al=document.querySelector('.top-nav-link[data-page="'+id+'"]');
+    if(al)al.style.color='var(--ink)';
+    if(window.__triggerTravel)window.__triggerTravel();
+    prev.style.transition='opacity 0.3s ease,transform 0.3s ease';
+    prev.style.opacity='0';prev.style.transform='scale(0.95)';
+    setTimeout(function(){
+      prev.classList.remove('active');prev.style.opacity='';prev.style.transform='';
+      next.style.opacity='0';next.style.transform='scale(0.95)';next.classList.add('active');
+      requestAnimationFrame(function(){
+        next.style.transition='opacity 0.5s ease,transform 0.5s cubic-bezier(0.22,1,0.36,1)';
+        next.style.opacity='1';next.style.transform='scale(1)';
+        setTimeout(function(){
+          next.style.opacity='';next.style.transform='';next.style.transition='';
+          if(id==='skills')console.log('skills page loaded');
+          transitioning=false;
+        },550);
+      });
+      currentPage=id;
+    },350);
+  }
+  document.querySelectorAll('.nav-btn,.top-nav-link,.top-nav-logo').forEach(btn=>{
+    btn.addEventListener('click',function(e){e.preventDefault();showPage(this.dataset.page);});
+  });
+  document.querySelectorAll('.back-btn').forEach(btn=>{
+    btn.addEventListener('click',function(){showPage(this.dataset.page);});
+  });
+  // Scroll reveal for projects & certs
+  const scrollObs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.style.transition='opacity 0.7s ease,transform 0.7s cubic-bezier(0.22,1,0.36,1)';e.target.style.opacity='1';e.target.style.transform='translateY(0)';scrollObs.unobserve(e.target);}});
+  },{threshold:0.1,rootMargin:'0px 0px -30px 0px'});
+  function setupReveal(){
+    document.querySelectorAll('#page-projects .pj,#page-certs .cec').forEach(c=>{c.style.opacity='0';c.style.transform='translateY(30px)';c.style.transition='none';scrollObs.observe(c);});
+  }
+  let lastPg='';
+  setInterval(function(){
+    const a=document.querySelector('.page.active');
+    if(!a)return;
+    const id=a.id.replace('page-','');
+    if(id!==lastPg){lastPg=id;if(id==='projects'||id==='certs')setTimeout(setupReveal,700);}
+  },200);
+  (function(){
+    const el=document.getElementById('heroType');if(!el)return;
+    const lines=['ML Engineer · AI Builder · Security Enthusiast','2nd Year B.Tech AI & DS — SKCET Coimbatore'];
+    let li=0,ci=0;const s=document.createElement('style');s.textContent='@keyframes bl{50%{opacity:0}}';document.head.appendChild(s);
+    function type(){if(li>=lines.length)return;el.textContent=lines[li].substring(0,ci);el.innerHTML+=' <span style="opacity:0.5;animation:bl 0.8s infinite;">|</span>';ci++;if(ci<=lines[li].length)setTimeout(type,15+Math.random()*20);else{li++;ci=0;setTimeout(type,700);}}
+    setTimeout(type,800);
+  })();
+  document.querySelectorAll('.landing-badge,.landing-title,.landing-sub,.landing-desc,.landing-nav').forEach((el,i)=>{
+    el.style.opacity='0';el.style.transform='translateY(16px)';el.style.transition='all 0.6s cubic-bezier(0.22,1,0.36,1) '+(0.3+i*0.15)+'s';
+    setTimeout(function(){el.style.opacity='1';el.style.transform='translateY(0)';},50);
+  });
+})();
+</script>
+</body>
+</html>
