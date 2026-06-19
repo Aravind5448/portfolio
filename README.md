@@ -2,7 +2,7 @@
 
 3D interactive portfolio built with Three.js, featuring a galaxy particle system, bloom effects, universe travel transitions, and glass-morphism UI. Hosted on Netlify.
 
-**Live:** [aravind5448.netlify.app](https://aravind5448.netlify.app)
+**Live:** [aravind-d.netlify.app](https://aravind-d.netlify.app)
 
 ## Tech Stack
 
