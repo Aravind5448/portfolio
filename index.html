@@ -30,7 +30,7 @@
     <div class="landing-badge"><span class="dot"></span> SYSTEM ONLINE</div>
     <h1 class="landing-title">Aravind <span class="ghost">D</span></h1>
     <p class="landing-sub" id="heroType"></p>
-    <p class="landing-desc">2nd year B.Tech AI & DS · SKCET Coimbatore<br>Building ML systems that ship</p>
+    <p class="landing-desc">3rd year B.Tech AI &amp; DS · SKCET Coimbatore<br>Building ML systems that ship</p>
     <nav class="landing-nav">
       <a href="#" data-page="about" class="nav-btn">01 / About</a>
       <a href="#" data-page="skills" class="nav-btn">02 / Skills</a>
@@ -60,7 +60,7 @@
     <h2 class="sp-title">About Me</h2>
     <div class="about-layout">
       <div class="about-text">
-        <p class="about-p">I'm a 2nd-year B.Tech Artificial Intelligence & Data Science student at Sri Krishna College of Engineering and Technology, Coimbatore. I build machine learning systems that ship — not just score well on Kaggle.</p>
+        <p class="about-p">I'm a 3rd-year B.Tech Artificial Intelligence & Data Science student at Sri Krishna College of Engineering and Technology, Coimbatore. I build machine learning systems that ship — not just score well on Kaggle.</p>
         <p class="about-p">I've deployed a production-grade phishing detection system trained on 235,795 URLs, with a FastAPI backend, Docker containerization, and GitHub Actions CI/CD pipeline. I run large language models locally using Ollama, compete in international CTF competitions, and am working toward a career as an ML Engineer at a high-impact product company.</p>
         <p class="about-p">Currently expanding my expertise into MLOps infrastructure, LLM orchestration frameworks, and agentic AI workflows — combining software engineering discipline with data science intuition.</p>
       </div>
@@ -296,7 +296,7 @@ window.addEventListener('resize',function(){cam.aspect=window.innerWidth/window.
   },200);
   (function(){
     const el=document.getElementById('heroType');if(!el)return;
-    const lines=['ML Engineer · AI Builder · Security Enthusiast','2nd Year B.Tech AI & DS — SKCET Coimbatore'];
+    const lines=['ML Engineer · AI Builder · Security Enthusiast','3rd Year B.Tech AI & DS — SKCET Coimbatore'];
     let li=0,ci=0;const s=document.createElement('style');s.textContent='@keyframes bl{50%{opacity:0}}';document.head.appendChild(s);
     function type(){if(li>=lines.length)return;el.textContent=lines[li].substring(0,ci);el.innerHTML+=' <span style="opacity:0.5;animation:bl 0.8s infinite;">|</span>';ci++;if(ci<=lines[li].length)setTimeout(type,15+Math.random()*20);else{li++;ci=0;setTimeout(type,700);}}
     setTimeout(type,800);
